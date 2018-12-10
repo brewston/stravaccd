@@ -6,7 +6,10 @@ from stravalib import Client
 
 # Access token instructions - https://yizeng.me/2017/01/11/get-a-strava-api-access-token-with-write-permission/
 
-client = Client(access_token="")
+token = open(".token","r")
+MyToken = token.read()
+MyToken = MyToken.rstrip()
+client = Client(access_token=MyToken)
 athlete = client.get_athlete() # Get my full athlete record
 
 
