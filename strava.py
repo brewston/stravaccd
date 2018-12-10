@@ -5,6 +5,7 @@ import sys
 from stravalib import Client
 
 # Access token instructions - https://yizeng.me/2017/01/11/get-a-strava-api-access-token-with-write-permission/
+# once you have the token, copy it to a file in same subdirectory called .token
 
 token = open(".token","r")
 MyToken = token.read()
